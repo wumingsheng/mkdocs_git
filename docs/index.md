@@ -6,6 +6,8 @@ git config --global credential.helper store
 ```
 
 
+## gitignore无效
+
 
 
 
