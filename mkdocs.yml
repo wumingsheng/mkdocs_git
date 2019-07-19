@@ -1,0 +1,5 @@
+site_name: git
+repo_url: https://github.com/wumingsheng/mkdocs_git.git
+nav:
+  - Home: index.md
+theme: mydocs
