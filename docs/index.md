@@ -1,4 +1,4 @@
-## git记住用户名和密码
+## 1. git -- 记住用户名和密码
 
 
 ```bash
@@ -6,7 +6,11 @@ git config --global credential.helper store
 ```
 
 
-## gitignore无效
+## 2. gitignore -- 无效
+
+
+
+
 
 
 
