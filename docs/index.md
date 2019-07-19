@@ -21,7 +21,7 @@ git rm -r --cached .
 ```
 ## 3. git -- 撤销修改
 
-### - 已修改，未暂存
+- 已修改，未暂存
 
 
 
@@ -34,7 +34,7 @@ git checkout .
 git reset --hard
 ```
 
-### - 已暂存，未提交
+- 已暂存，未提交
 
 
 ```
@@ -48,7 +48,7 @@ git reset --hard
 ```
 
 
-### - 已提交，未推送
+- 已提交，未推送
 
 
 ```
@@ -56,7 +56,7 @@ git reset --hard
 git reset --hard origin/master
 ```
 
-### - 已推送
+- 已推送
 
 
 ```
