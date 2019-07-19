@@ -84,10 +84,6 @@
         <li class="main active"><a href="#1-git-">1. git -- 记住用户名和密码</a></li>
         <li class="main "><a href="#2-gitignore-">2. gitignore -- 无效</a></li>
         <li class="main "><a href="#3-git-">3. git -- 撤销修改</a></li>
-            <li><a href="#-">- 已修改，未暂存</a></li>
-            <li><a href="#-_1">- 已暂存，未提交</a></li>
-            <li><a href="#-_2">- 已提交，未推送</a></li>
-            <li><a href="#-_3">- 已推送</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -109,7 +105,9 @@ git rm -r --cached .
 </code></pre>
 
 <h2 id="3-git-">3. git -- 撤销修改</h2>
-<h3 id="-">- 已修改，未暂存</h3>
+<ul>
+<li>已修改，未暂存</li>
+</ul>
 <pre><code># 如果我们只是在编辑器里修改了文件，还没有执行`git add`
 git checkout .
 
@@ -118,7 +116,9 @@ git checkout .
 git reset --hard
 </code></pre>
 
-<h3 id="-_1">- 已暂存，未提交</h3>
+<ul>
+<li>已暂存，未提交</li>
+</ul>
 <pre><code># 如果我们已近执行了`git add .`还没有执行`git commit`
 git reset 
 git checkout .
@@ -128,12 +128,16 @@ git checkout .
 git reset --hard
 </code></pre>
 
-<h3 id="-_2">- 已提交，未推送</h3>
+<ul>
+<li>已提交，未推送</li>
+</ul>
 <pre><code># 你的手太快，执行了`git add .`,又执行了`git commit`,这个时候你的代码进入了你的本地仓库，
 git reset --hard origin/master
 </code></pre>
 
-<h3 id="-_3">- 已推送</h3>
+<ul>
+<li>已推送</li>
+</ul>
 <pre><code># 很不辛，你的手实在太快了。你既`git add`又`git commit`还`git push`,这个时候你的代码已近进入的远程仓库
 # 不保留提交历史
 git reset --hard HEAD^
@@ -226,5 +230,5 @@ git revert &lt; sha &gt;
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2019-07-19 16:54:17
+Build Date UTC : 2019-07-19 16:59:13
 -->
