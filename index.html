@@ -91,7 +91,17 @@
 <pre><code class="bash">git config --global credential.helper store
 </code></pre>
 
-<h2 id="2-gitignore-">2. gitignore -- 无效</h2></div>
+<h2 id="2-gitignore-">2. gitignore -- 无效</h2>
+<pre><code class="bash">#文件夹
+git rm -r --cached .idea
+
+#文件   
+git rm --cached demo-project.iml
+
+# 所有
+git rm -r --cached .
+
+</code></pre></div>
         </div>
 
         <footer class="col-md-12">
@@ -174,5 +184,5 @@
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2019-07-19 16:42:03
+Build Date UTC : 2019-07-19 16:46:07
 -->
