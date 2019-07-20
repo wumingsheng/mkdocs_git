@@ -1,5 +1,18 @@
 site_name: git
+site_url: https://wumingsheng.github.io/mkdocs_git/
+
 repo_url: https://github.com/wumingsheng/mkdocs_git
+
+
+site_description: Git Project documentation with Markdown.
+site_author: wumingsheng
+
+edit_uri: ""
+
+
+
+
+
 nav:
   - Home: index.md
   - Note: note.md
