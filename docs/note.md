@@ -2,6 +2,7 @@
 
 
 - git重命名文件: `git mv readme readme.md`
+
 - git删除文件: `git rm readme.md`
 
 >> `git mv`,`git rm`和`git add` 级别一样，会直接保存到暂存区，下一步可以直接`commit`
