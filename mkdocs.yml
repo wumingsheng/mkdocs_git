@@ -18,6 +18,7 @@ nav:
   - Note: note.md
   - About: 
     - 独自使用git时的一些常见场景: about/stand-alone.md
+    - tag相关到一些命令: about/tag.md
 
 
 
