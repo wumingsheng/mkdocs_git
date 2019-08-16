@@ -98,18 +98,56 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<ul>
-<li>列出已有标签：git tag</li>
-<li>加上 -l 命令可以使用通配符来过滤tag: git tag -l "v1.0."</li>
-<li>新建tag: git tag v1.0.0</li>
-<li>通过 -a 参数创建一个带备注的tag: git tag -a tagname -m "my tag"</li>
-<li>显示tag详细信息: git show v1.0.0</li>
-<li>给指定的commit号添加tag: git tag -a v1.2 9fceb02 -m "my tag"</li>
-<li>将tag同步到远程服务器: git push origin tagName</li>
-<li>切换到某个tag: git checkout tagName</li>
-<li>删除某个tag: git tag -d tagName</li>
-<li>远端删除：git push origin :refs/tags/<tagName></li>
-</ul></div>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>列出已有标签</td>
+<td>git tag</td>
+</tr>
+<tr>
+<td>加上 -l 命令可以使用通配符来过滤tag</td>
+<td>git tag -l "v1.0."</td>
+</tr>
+<tr>
+<td>新建tag</td>
+<td>git tag v1.0.0</td>
+</tr>
+<tr>
+<td>通过 -a 参数创建一个带备注的tag</td>
+<td>git tag -a tagname -m "my tag"</td>
+</tr>
+<tr>
+<td>显示tag详细信息</td>
+<td>git show v1.0.0</td>
+</tr>
+<tr>
+<td>给指定的commit号添加tag</td>
+<td>git tag -a v1.2 9fceb02 -m "my tag"</td>
+</tr>
+<tr>
+<td>将tag同步到远程服务器</td>
+<td>git push origin tagName</td>
+</tr>
+<tr>
+<td>切换到某个tag</td>
+<td>git checkout tagName</td>
+</tr>
+<tr>
+<td>删除某个tag</td>
+<td>git tag -d tagName</td>
+</tr>
+<tr>
+<td>远端删除：git push origin</td>
+<td>refs/tags/<tagName></td>
+</tr>
+</tbody>
+</table></div>
         </div>
 
         <footer class="col-md-12">
