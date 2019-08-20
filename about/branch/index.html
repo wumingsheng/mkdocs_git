@@ -6,12 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="wumingsheng">
-        <link rel="canonical" href="https://wumingsheng.github.io/mkdocs_git/note/">
-        <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Note - git</title>
-        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../css/base.css" rel="stylesheet">
+        <link rel="canonical" href="https://wumingsheng.github.io/mkdocs_git/about/branch/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>git拉取远程分支并切换到该分支 - git</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <script src="../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
@@ -39,7 +39,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="..">git</a>
+                    <a class="navbar-brand" href="../..">git</a>
                 </div>
 
                 <!-- Expanded navigation -->
@@ -47,25 +47,25 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li >
-                                <a href="..">Home</a>
+                                <a href="../..">Home</a>
                             </li>
-                            <li class="active">
-                                <a href="./">Note</a>
+                            <li >
+                                <a href="../../note/">Note</a>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="../about/stand-alone/">独自使用git时的一些常见场景</a>
+    <a href="../stand-alone/">独自使用git时的一些常见场景</a>
 </li>
                                     
 <li >
-    <a href="../about/tag/">tag相关到一些命令</a>
+    <a href="../tag/">tag相关到一些命令</a>
 </li>
                                     
-<li >
-    <a href="../about/branch/">git拉取远程分支并切换到该分支</a>
+<li class="active">
+    <a href="./">git拉取远程分支并切换到该分支</a>
 </li>
                                 </ul>
                             </li>
@@ -78,12 +78,12 @@
                             </a>
                         </li>
                             <li >
-                                <a rel="next" href="..">
+                                <a rel="next" href="../tag/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
-                            <li >
-                                <a rel="prev" href="../about/stand-alone/">
+                            <li class="disabled">
+                                <a rel="prev" >
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -98,37 +98,21 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#_1">常用操作命令</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="_1">常用操作命令</h1>
-<ul>
-<li>
-<p>git重命名文件: <code>git mv readme readme.md</code></p>
-</li>
-<li>
-<p>git删除文件: <code>git rm readme.md</code></p>
-</li>
-</ul>
-<blockquote>
-<blockquote>
-<p><code>git mv</code>,<code>git rm</code>和<code>git add</code> 级别一样，会直接保存到暂存区，下一步可以直接<code>commit</code></p>
-</blockquote>
-</blockquote>
-<ul>
-<li>
-<p><code>git commit -am 'message'</code>: 可以将<code>git add</code> 和 <code>git commit -m 'message'</code> 两步合二为一</p>
-</li>
-<li>
-<p><code>git branch -av</code>: 查看本地到所有分支</p>
-</li>
-<li>
-<p><code>git checkout -b dev commitId</code>: 根据某个提交创建新分支</p>
-</li>
-<li><code>git checkout -b dev test</code>: 根据某个分支创建新分支</li>
-</ul></div>
+<p>整理了五种方法，我常用最后一种，这五种方法（除了第4中已经写了fetch的步骤）执行前都需要执行git fetch来同步远程仓库</p>
+<p>（1）git checkout -b 本地分支名 origin/远程分支名</p>
+<p>（2）git checkout --track origin/远程分支名 （这种写法是上面的简化版，效果完全一样）</p>
+<p>（3）git checkout -t origin/远程分支名（这种写法是2的简化版）</p>
+<p>（4）fetch指定的一个分支：git fetch [repo] [remote_branch_name]:[local_branch_name]</p>
+<p>git checkout [local_branch_name]</p>
+<p>（第一行的:[local_branch_name]如果不写，则本地新建的分支名默认与远程分支名相同）</p>
+<p>（5）git fetch 获取远程所有分支</p>
+<p>git branch -r 可以看到所有远程分支，假设有一个分支叫origin/mybranch</p>
+<p>git checkout mybranch即可，会在本地新建一个同名分支，并与该远程分支关联</p>
+<p>（git checkout origin/mybranch 会进入detached head状态，不会在本地新建分支，不要这样写）</p></div>
         </div>
 
         <footer class="col-md-12">
@@ -136,11 +120,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = "..",
+            var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../js/base.js" defer></script>
-        <script src="../search/main.js" defer></script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
     <div class="modal-dialog">
